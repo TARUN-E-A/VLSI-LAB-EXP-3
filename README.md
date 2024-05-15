@@ -1,31 +1,42 @@
-# SIMULATION AND IMPLEMENTATION OF BINARY MULTIPLIER
+**3.SIMULATION AND IMPLEMENTATION OF BINARY MULTIPLIER**
 
-## AIM:
+**AIM:**
+ 
  To simulate and synthesis multiplier using Xilinx ISE.
 
-## APPARATUS REQUIRED:
+**APPARATUS REQUIRED:**
+
 Xilinx 14.7
+
 Spartan6 FPGA
   
-## PROCEDURE:
-STEP:1  Start  the Xilinx navigator, Select and Name the New project.
-STEP:2  Select the device family, device, package and speed.       
-STEP:3  Select new source in the New Project and select Verilog Module as the Source type.                       
-STEP:4  Type the File Name and Click Next and then finish button. Type the code and save it.
-STEP:5  Select the Behavioral Simulation in the Source Window and click the check syntax.                       
-STEP:6  Click the simulation to simulate the program and  give the inputs and verify the outputs as per the truth table.               
-STEP:7  Select the Implementation in the Sources Window and select the required file in the Processes Window.
-STEP:8  Select Check Syntax from the Synthesize  XST Process. Double Click in the  FloorplanArea/IO/Logic-Post Synthesis process in the User Constraints process group. UCF(User constraint File) is obtained. 
-STEP:9  In the Design Object List Window, enter the pin location for each pin in the Loc column Select save from the File menu.
-STEP:10 Double click on the Implement Design and double click on the Generate Programming File to create a bitstream of the design.(.v) file is converted into .bit file here.
-STEP:11  On the board, by giving required input, the LEDs starts to glow light, indicating the output.
+**PROCEDURE:**
 
-## 2 Bit Multiplier:
+1. Open Vivado: Launch Xilinx Vivado software on your computer.
 
-### Logic Diagram:
+2. Create a New Project: Click on "Create Project" from the welcome page or navigate through "File" > "Project" > "New".
+
+3. Project Settings: Follow the prompts to set up your project. Specify the project name, location, and select RTL project type.
+
+4. Add Design Files: Add your Verilog design files to the project. You can do this by right-clicking on "Design Sources" in the Sources window, then selecting "Add Sources". Choose your Verilog files from the file browser.
+
+5. Specify Simulation Settings: Go to "Simulation" > "Simulation Settings". Choose your simulation language (Verilog in this case) and simulation tool (Vivado Simulator).
+
+6. Run Simulation: Go to "Flow" > "Run Simulation" > "Run Behavioral Simulation". This will launch the Vivado Simulator and compile your design for simulation.
+
+7. Set Simulation Time: In the Vivado Simulator window, set the simulation time if it's not set automatically. This determines how long the simulation will run.
+
+8. Run Simulation: Start the simulation by clicking on the "Run" button in the simulation window.
+
+9. View Results: After the simulation completes, you can view waveforms, debug signals, and analyze the behavior of your design.
+
+**2 Bit Multiplier:**
+
+**Logic Diagram:**
+
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-3/assets/6987778/7713750f-65e6-41c0-8082-5005eac4031c)
 
-### Verilog code:
+**Verilog code:**
 ```
 module HalfAdder(a,b,sum,carry);
 input a,b;
@@ -47,15 +58,17 @@ HalfAdder h1(w3,w4,y[2],y[3]);
 endmodule
 ```
 
-### Output Waveform:
+**Output Waveform:**
+
 ![image](https://github.com/TARUN-E-A/VLSI-LAB-EXP-3/assets/163630871/e8712f29-cc8c-41e5-b439-5918abee3530)
 
-## 4 Bit Multiplier:
+**4 Bit Multiplier:**
 
-### Logic Diagram:
+**Logic Diagram:**
+
 ![image](https://github.com/navaneethans/VLSI-LAB-EXP-3/assets/6987778/d95215dd-8cf1-4e08-93cc-96adfdd7fbdc)
 
-### Verilog code:
+**Verilog code:**
 ```
 module  ha (a,b,s,c);
 input a,b;
@@ -93,11 +106,12 @@ fa fa8 (w[11],x[3]&y[3],w[17],z[6],z[7]);
 endmodule
 ```
 
-### Output Waveform:
+**Output Waveform:**
+
 ![image](https://github.com/TARUN-E-A/VLSI-LAB-EXP-3/assets/163630871/9664977a-5257-4217-9271-ee9a4430c2e2)
 
+**Result:**
 
-## Result:
 Hence the 2 bit multiplier and 4 bit multiplier are simulated and synthesised using Xilinx ISE. 
 
 
